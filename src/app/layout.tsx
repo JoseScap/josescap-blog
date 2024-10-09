@@ -3,11 +3,14 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Image from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Archive, Home, Info, Layers, Mic, Search, Tag, Video } from "lucide-react";
+import { Archive, Home, Info, Layers, Search, Tag, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
+import microsoftBadge from "@/assets/microsoft-certified-associate-badge.svg"
+import profile from "@/assets/profile.jpeg"
+import TRENDING_TAGS from "@/constants/trending-tags";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -41,10 +44,8 @@ export default function RootLayout({
             <ScrollArea className="h-full">
               <div className="mb-8">
                 <Image
-                  src="/placeholder.svg?height=80&width=80"
+                  src={profile}
                   alt="Profile"
-                  width={80}
-                  height={80}
                   className="rounded-full mx-auto"
                 />
                 <h1 className="text-xl font-bold text-center mt-4">Programming With JoseScap</h1>
@@ -55,7 +56,6 @@ export default function RootLayout({
                   <li><Button variant="ghost" className="w-full justify-start"><Home className="mr-2 h-4 w-4" />HOME</Button></li>
                   <li><Button variant="ghost" className="w-full justify-start"><Layers className="mr-2 h-4 w-4" />CATEGORIES</Button></li>
                   <li><Button variant="ghost" className="w-full justify-start"><Tag className="mr-2 h-4 w-4" />TAGS</Button></li>
-                  <li><Button variant="ghost" className="w-full justify-start"><Mic className="mr-2 h-4 w-4" />SPEAKING</Button></li>
                   <li><Button variant="ghost" className="w-full justify-start"><Video className="mr-2 h-4 w-4" />VIDEOS</Button></li>
                   <li><Button variant="ghost" className="w-full justify-start"><Archive className="mr-2 h-4 w-4" />ARCHIVES</Button></li>
                   <li><Button variant="ghost" className="w-full justify-start"><Info className="mr-2 h-4 w-4" />ABOUT</Button></li>
@@ -63,11 +63,9 @@ export default function RootLayout({
               </nav>
               <div className="mt-8">
                 <Image
-                  src="/placeholder.svg?height=100&width=100"
+                  src={microsoftBadge}
                   alt="Certification"
-                  width={100}
-                  height={100}
-                  className="mx-auto"
+                  className="mx-auto max-w-[90%]"
                 />
               </div>
             </ScrollArea>
@@ -100,7 +98,7 @@ export default function RootLayout({
               <div>
                 <h3 className="text-xl font-bold mb-4">Trending Tags</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Azure', 'Kubernetes', 'C#', 'Azure DevOps', 'DevOps', 'Docker', 'Helm', 'AKS', 'Azure Arc', 'Learning'].map((tag) => (
+                  {TRENDING_TAGS.map((tag) => (
                     <Badge key={tag} variant="secondary" className="cursor-pointer hover:bg-gray-600">
                       {tag}
                     </Badge>
