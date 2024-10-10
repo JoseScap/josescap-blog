@@ -27,54 +27,54 @@ export default function About() {
             <thead>
               <tr className="bg-gray-700">
                 <th className="border border-gray-600 p-2 text-left text-white">Certification</th>
-                <th className="border border-gray-600 p-2 text-left text-white">Date</th>
-                <th className="border border-gray-600 p-2 text-left text-white">Badge</th>
+                <th className="border border-gray-600 p-2 text-center text-white">Badge</th>
+                <th className="border border-gray-600 p-2 text-right text-white">Date</th>
               </tr>
             </thead>
             <tbody>
               <tr className="hover:bg-gray-600">
-                <td className="border border-gray-600 p-2 text-gray-200">
+                <td className="border border-gray-600 p-2 text-left text-gray-200">
                   <a href="https://learn.microsoft.com/api/credentials/share/en-us/josescap/B8BC64A2C86FFBE3?sharingId=C7C86D285CB602EE" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
                     Microsoft Certified: Azure Fundamentals
                   </a>
                 </td>
-                <td className="border border-gray-600 p-2 text-gray-200">August 26, 2023</td>
-                <td className="border border-gray-600 p-2">
+                <td className="border border-gray-600 p-2 text-center">
                   <Image src={Azure900Badge} alt="Azure Fundamentals Badge" width={200} height={200} />
                 </td>
+                <td className="border border-gray-600 p-2 text-right text-gray-200">August 26, 2023</td>
               </tr>
               <tr className="hover:bg-gray-600">
-                <td className="border border-gray-600 p-2 text-gray-200">
+                <td className="border border-gray-600 p-2 text-left text-gray-200">
                   <a href="https://learn.microsoft.com/api/credentials/share/en-us/josescap/923A36066B895AD6?sharingId=C7C86D285CB602EE" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
                     Microsoft Certified: Azure Developer Associate
                   </a>
                 </td>
-                <td className="border border-gray-600 p-2 text-gray-200">September 30, 2024</td>
-                <td className="border border-gray-600 p-2">
+                <td className="border border-gray-600 p-2 text-center">
                   <Image src={Azure204Badge} alt="Azure Developer Associate Badge" width={200} height={200} />
                 </td>
+                <td className="border border-gray-600 p-2 text-right text-gray-200">September 30, 2024</td>
               </tr>
               <tr className="hover:bg-gray-600">
-                <td className="border border-gray-600 p-2 text-gray-200">
+                <td className="border border-gray-600 p-2 text-left text-gray-200">
                   <a href="#" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
                     GitHub Foundations
                   </a>
                 </td>
-                <td className="border border-gray-600 p-2 text-gray-200">November 15, 2023</td>
-                <td className="border border-gray-600 p-2">
+                <td className="border border-gray-600 p-2 text-center">
                   <Image src={GithubFoundations} alt="GitHub Foundations Badge" width={200} height={200} />
                 </td>
+                <td className="border border-gray-600 p-2 text-right text-gray-200">November 15, 2023</td>
               </tr>
               <tr className="hover:bg-gray-600">
-                <td className="border border-gray-600 p-2 text-gray-200">
+                <td className="border border-gray-600 p-2 text-left text-gray-200">
                   <a href="#" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
                     Microsoft Certified: DevOps Engineer Expert
                   </a>
                 </td>
-                <td className="border border-gray-600 p-2 text-gray-200">March 15, 2024</td>
-                <td className="border border-gray-600 p-2">
+                <td className="border border-gray-600 p-2 text-center">
                   <Image src={Azure400Badge} alt="DevOps Engineer Expert Badge" width={200} height={200} />
                 </td>
+                <td className="border border-gray-600 p-2 text-right text-gray-200">March 15, 2024</td>
               </tr>
             </tbody>
           </table>
