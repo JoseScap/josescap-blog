@@ -114,7 +114,7 @@ export default function About() {
                 <td className="border border-gray-600 p-2 flex justify-center">
                   <Image src={GithubFoundations} alt="GitHub Foundations Badge" width={200} height={200} />
                 </td>
-                <td className="border border-gray-600 p-2 text-right text-gray-200">November 15, 2023</td>
+                <td className="border border-gray-600 p-2 text-right text-gray-200">(Tentative) November 15, 2024</td>
               </tr>
               <tr className="hover:bg-gray-600">
                 <td className="border border-gray-600 p-2 text-left text-gray-200">
@@ -125,7 +125,7 @@ export default function About() {
                 <td className="border border-gray-600 p-2 flex justify-center">
                   <Image src={Azure400Badge} alt="DevOps Engineer Expert Badge" width={200} height={200} />
                 </td>
-                <td className="border border-gray-600 p-2 text-right text-gray-200">March 15, 2024</td>
+                <td className="border border-gray-600 p-2 text-right text-gray-200">(Tentative) March 15, 2025</td>
               </tr>
             </tbody>
           </table>
