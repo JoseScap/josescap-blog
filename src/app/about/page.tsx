@@ -38,7 +38,7 @@ export default function About() {
                     Microsoft Certified: Azure Fundamentals
                   </a>
                 </td>
-                <td className="border border-gray-600 p-2 text-center">
+                <td className="border border-gray-600 p-2 flex justify-center">
                   <Image src={Azure900Badge} alt="Azure Fundamentals Badge" width={200} height={200} />
                 </td>
                 <td className="border border-gray-600 p-2 text-right text-gray-200">August 26, 2023</td>
@@ -49,7 +49,7 @@ export default function About() {
                     Microsoft Certified: Azure Developer Associate
                   </a>
                 </td>
-                <td className="border border-gray-600 p-2 text-center">
+                <td className="border border-gray-600 p-2 flex justify-center">
                   <Image src={Azure204Badge} alt="Azure Developer Associate Badge" width={200} height={200} />
                 </td>
                 <td className="border border-gray-600 p-2 text-right text-gray-200">September 30, 2024</td>
@@ -60,7 +60,7 @@ export default function About() {
                     GitHub Foundations
                   </a>
                 </td>
-                <td className="border border-gray-600 p-2 text-center">
+                <td className="border border-gray-600 p-2 flex justify-center">
                   <Image src={GithubFoundations} alt="GitHub Foundations Badge" width={200} height={200} />
                 </td>
                 <td className="border border-gray-600 p-2 text-right text-gray-200">November 15, 2023</td>
@@ -71,7 +71,7 @@ export default function About() {
                     Microsoft Certified: DevOps Engineer Expert
                   </a>
                 </td>
-                <td className="border border-gray-600 p-2 text-center">
+                <td className="border border-gray-600 p-2 flex justify-center">
                   <Image src={Azure400Badge} alt="DevOps Engineer Expert Badge" width={200} height={200} />
                 </td>
                 <td className="border border-gray-600 p-2 text-right text-gray-200">March 15, 2024</td>
