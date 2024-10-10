@@ -5,6 +5,7 @@ import GithubFoundations from "@/assets/github-foundations-badge.png";
 import Azure400Badge from "@/assets/azure-400-badge.png";
 import Head from "next/head";
 import { Metadata } from "next";
+import { useEffect, useState } from "react";
 
 export const metadata: Metadata = {
   title: "About | JoseScap's Blog",
@@ -33,28 +34,34 @@ export const metadata: Metadata = {
 
 
 export default function About() {
+  const calculateExperience = () => {
+    const startYear = 2020;
+    const startMonth = 0;
+    const startDate = new Date(startYear, startMonth);
+
+    const currentDate = new Date();
+
+
+    const totalMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12
+      + (currentDate.getMonth() - startDate.getMonth());
+
+
+    const totalYears = totalMonths / 12;
+
+
+    const roundedYears = Math.floor(totalYears * 2) / 2;
+
+    return roundedYears;
+  };
+
+  const experience = calculateExperience();
+
   return (
     <main className="flex-1 md:ml-64 lg:mr-64">
-      <Head>
-        <title>About | JoseScap's Blog</title>
-        <meta name="description" content="Learn more about JoseScap, a software engineer with 4.5+ years of experience. Discover his journey in software and cloud engineering." />
-        <meta name="keywords" content="JoseScap, software engineer, Azure, cloud engineering, web development, APIs, certifications" />
-        <meta name="author" content="Juan José Puente Scapolatempo" />
-        <meta property="og:title" content="About | JoseScap's Blog" />
-        <meta property="og:description" content="Learn more about JoseScap and his professional journey." />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/assets/profile.jpeg" />
-        <meta property="og:url" content="https://yourwebsite.com/about" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About | JoseScap's Blog" />
-        <meta name="twitter:description" content="Discover JoseScap's professional experience and journey in software and cloud engineering." />
-        <meta name="twitter:image" content="/assets/profile.jpeg" />
-      </Head>
-
       <div className="p-8">
         <h1 className="text-3xl font-bold mb-6 text-white">About Me</h1>
         <div className="space-y-4">
-          <p className="text-gray-200">Hi, I'm Juan José Puente Scapolatempo, also known as JoseScap, a software engineer with over 4.5 years of experience in developing applications.</p>
+          <p className="text-gray-200">Hi, I'm Juan José Puente Scapolatempo, also known as JoseScap, a software engineer with over {experience} years of experience in developing applications.</p>
           <p className="text-gray-200">Throughout my career, I've worked on web applications, mobile apps, and APIs across various programming languages and technologies.</p>
           <p className="text-gray-200">Currently, I'm in the process of reinventing my professional profile as a Software & Cloud Engineer, focusing on mastering Azure technologies to build reliable and robust applications.</p>
         </div>
