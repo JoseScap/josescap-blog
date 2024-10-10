@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
-import microsoftBadge from "@/assets/microsoft-certified-associate-badge.svg"
+import Azure204Badge from "@/assets/azure-204-badge.png";
 import profile from "@/assets/profile.jpeg"
 import TRENDING_TAGS from "@/constants/trending-tags";
 
@@ -63,7 +63,7 @@ export default function RootLayout({
               </nav>
               <div className="mt-8">
                 <Image
-                  src={microsoftBadge}
+                  src={Azure204Badge}
                   alt="Certification"
                   className="mx-auto max-w-[90%]"
                 />
@@ -72,7 +72,7 @@ export default function RootLayout({
           </aside>
 
           {/* Main Content */}
-          <main className="flex-1 md:ml-64 lg:mr-64">
+          <main className="flex-1 md:ml-24 lg:mr-24">
             <ScrollArea className="h-screen">
               <div className="p-8">
                 {children}
