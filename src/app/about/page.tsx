@@ -4,27 +4,51 @@ import Azure204Badge from "@/assets/azure-204-badge.png";
 import GithubFoundations from "@/assets/github-foundations-badge.png";
 import Azure400Badge from "@/assets/azure-400-badge.png";
 import Head from "next/head";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About | JoseScap's Blog",
+  description: "Learn more about JoseScap, a software engineer with 4.5+ years of experience. Discover his journey in software and cloud engineering.",
+  keywords: ["JoseScap", "software engineer", "Azure", "cloud engineering", "web development", "APIs", "certifications"],
+  authors: [{ name: "Juan José Puente Scapolatempo" }],
+  openGraph: {
+    title: "About | JoseScap's Blog",
+    description: "Learn more about JoseScap and his professional journey.",
+    type: "website",
+    url: "https://yourwebsite.com/about",
+    images: [
+      {
+        url: "/profile.jpeg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About | JoseScap's Blog",
+    description: "Discover JoseScap's professional experience and journey in software and cloud engineering.",
+    images: ["/profile.jpeg"],
+  },
+};
+
+
 
 export default function About() {
   return (
     <main className="flex-1 md:ml-64 lg:mr-64">
       <Head>
-        {/* Meta tags for SEO */}
-        <title>About Me | Juan José Puente Scapolatempo - Software & Cloud Engineer</title>
-        <meta name="description" content="Learn more about Juan José Puente Scapolatempo, a software and cloud engineer with over 4.5 years of experience. Discover his journey, certifications, and why he created this blog." />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://yourwebsite.com/about" />
-        <meta property="og:title" content="About Me | Juan José Puente Scapolatempo - Software & Cloud Engineer" />
-        <meta property="og:description" content="Discover the journey of Juan José Puente Scapolatempo as he transitions to a Software & Cloud Engineer, with a focus on Azure technologies." />
-        <meta property="og:url" content="https://yourwebsite.com/about" />
+        <title>About | JoseScap's Blog</title>
+        <meta name="description" content="Learn more about JoseScap, a software engineer with 4.5+ years of experience. Discover his journey in software and cloud engineering." />
+        <meta name="keywords" content="JoseScap, software engineer, Azure, cloud engineering, web development, APIs, certifications" />
+        <meta name="author" content="Juan José Puente Scapolatempo" />
+        <meta property="og:title" content="About | JoseScap's Blog" />
+        <meta property="og:description" content="Learn more about JoseScap and his professional journey." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://yourwebsite.com/assets/profile-pic.jpg" />
+        <meta property="og:image" content="/assets/profile.jpeg" />
+        <meta property="og:url" content="https://yourwebsite.com/about" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Me | Juan José Puente Scapolatempo - Software & Cloud Engineer" />
-        <meta name="twitter:description" content="Learn more about Juan José Puente Scapolatempo, his experience in software and cloud engineering, and his certifications." />
-        <meta name="twitter:image" content="https://yourwebsite.com/assets/profile-pic.jpg" />
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="twitter:title" content="About | JoseScap's Blog" />
+        <meta name="twitter:description" content="Discover JoseScap's professional experience and journey in software and cloud engineering." />
+        <meta name="twitter:image" content="/assets/profile.jpeg" />
       </Head>
 
       <div className="p-8">
