@@ -1,5 +1,4 @@
-import { Archive, Home, Info, Layers, Tag, Video } from "lucide-react"
-import { ReactNode } from "react"
+import { Home, Info, Layers, Tag, Video } from "lucide-react"
 
 type AppPage = {
   href: string
