@@ -5,7 +5,7 @@ export const JAVASCRIPT_TAG = "JavaScript";
 export const REACT_TAG = "React";
 export const TYPESCRIPT_TAG = "TypeScript";
 
-export const TRENDING_TAGS = [
+export const TRENDING_TAGS: string[] = [
   JAVASCRIPT_TAG,
   AZURE_TAG,
   DOCKER_TAG,
