@@ -28,13 +28,6 @@ export const CERTIFICATIONS: Certification[] = [
     achieved: true
   },
   {
-    name: "GitHub Foundations",
-    link: "https://assets.ctfassets.net/wfutmusr1t3h/1kmMx7AwI4qH8yIZgOmQlP/79e6ff1dfdee589d84a24dd763b1eef7/github-foundations-exam-study-guide__1_.pdf",
-    badge: GithubFoundationsBadge,
-    date: "November 15, 2024",
-    achieved: false
-  },
-  {
     name: "Microsoft Certified: DevOps Engineer Expert",
     link: "https://learn.microsoft.com/es-es/credentials/certifications/devops-engineer/",
     badge: Azure400Badge,
