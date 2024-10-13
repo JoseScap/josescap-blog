@@ -5,6 +5,7 @@ import GithubFoundations from "@/assets/github-foundations-badge.png";
 import Azure400Badge from "@/assets/azure-400-badge.png";
 import { Metadata } from "next";
 import { CERTIFICATIONS } from "@/constants/certifications";
+import TitleOne from "@/components/blog/TitleOne";
 
 export const metadata: Metadata = {
   title: "About | JoseScap's Blog",
@@ -58,7 +59,7 @@ export default function About() {
   return (
     <main className="flex-1 md:ml-64 lg:mr-64">
       <div className="p-8">
-        <h1 className="text-3xl font-bold mb-6 text-white">About Me</h1>
+        <TitleOne>About Me</TitleOne>
         <div className="space-y-4">
           <p className="text-gray-200">Hi, I'm Juan José Puente Scapolatempo, also known as JoseScap, a software engineer with over {experience} years of experience in developing applications.</p>
           <p className="text-gray-200">Throughout my career, I've worked on web applications, mobile apps, and APIs across various programming languages and technologies.</p>
