@@ -3,9 +3,8 @@ import Azure900Badge from "@/assets/azure-900-badge.png";
 import Azure204Badge from "@/assets/azure-204-badge.png";
 import GithubFoundations from "@/assets/github-foundations-badge.png";
 import Azure400Badge from "@/assets/azure-400-badge.png";
-import Head from "next/head";
 import { Metadata } from "next";
-import { useEffect, useState } from "react";
+import { CERTIFICATIONS } from "@/constants/certifications";
 
 export const metadata: Metadata = {
   title: "About | JoseScap's Blog",
@@ -83,50 +82,23 @@ export default function About() {
               </tr>
             </thead>
             <tbody>
-              <tr className="hover:bg-gray-600">
-                <td className="border border-gray-600 p-2 text-left text-gray-200">
-                  <a href="https://learn.microsoft.com/api/credentials/share/en-us/josescap/B8BC64A2C86FFBE3?sharingId=C7C86D285CB602EE" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
-                    Microsoft Certified: Azure Fundamentals
-                  </a>
-                </td>
-                <td className="border border-gray-600 p-2 flex justify-center">
-                  <Image src={Azure900Badge} alt="Azure Fundamentals Badge" width={200} height={200} />
-                </td>
-                <td className="border border-gray-600 p-2 text-right text-gray-200">August 26, 2023</td>
-              </tr>
-              <tr className="hover:bg-gray-600">
-                <td className="border border-gray-600 p-2 text-left text-gray-200">
-                  <a href="https://learn.microsoft.com/api/credentials/share/en-us/josescap/923A36066B895AD6?sharingId=C7C86D285CB602EE" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
-                    Microsoft Certified: Azure Developer Associate
-                  </a>
-                </td>
-                <td className="border border-gray-600 p-2 flex justify-center">
-                  <Image src={Azure204Badge} alt="Azure Developer Associate Badge" width={200} height={200} />
-                </td>
-                <td className="border border-gray-600 p-2 text-right text-gray-200">September 30, 2024</td>
-              </tr>
-              <tr className="hover:bg-gray-600">
-                <td className="border border-gray-600 p-2 text-left text-gray-200">
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
-                    GitHub Foundations
-                  </a>
-                </td>
-                <td className="border border-gray-600 p-2 flex justify-center">
-                  <Image src={GithubFoundations} alt="GitHub Foundations Badge" width={200} height={200} />
-                </td>
-                <td className="border border-gray-600 p-2 text-right text-gray-200">(Tentative) November 15, 2024</td>
-              </tr>
-              <tr className="hover:bg-gray-600">
-                <td className="border border-gray-600 p-2 text-left text-gray-200">
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
-                    Microsoft Certified: DevOps Engineer Expert
-                  </a>
-                </td>
-                <td className="border border-gray-600 p-2 flex justify-center">
-                  <Image src={Azure400Badge} alt="DevOps Engineer Expert Badge" width={200} height={200} />
-                </td>
-                <td className="border border-gray-600 p-2 text-right text-gray-200">(Tentative) March 15, 2025</td>
-              </tr>
+              {
+                CERTIFICATIONS.map(({ achieved, badge, date, link, name }) => (
+                  <tr className="hover:bg-gray-600">
+                    <td className="border border-gray-600 p-2 text-left text-gray-200">
+                      <a href={link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+                        {name}
+                      </a>
+                    </td>
+                    <td className="border border-gray-600 p-2 flex justify-center">
+                      <Image src={badge} alt="Azure Fundamentals Badge" width={200} height={200} />
+                    </td>
+                    <td className="border border-gray-600 p-2 text-right text-gray-200">
+                      {achieved ? "" : "(Tentative)"} {date}
+                    </td>
+                  </tr>
+                ))
+              }
             </tbody>
           </table>
         </div>
