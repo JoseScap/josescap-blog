@@ -1,8 +1,4 @@
 import Image from "next/image";
-import Azure900Badge from "@/assets/azure-900-badge.png";
-import Azure204Badge from "@/assets/azure-204-badge.png";
-import GithubFoundations from "@/assets/github-foundations-badge.png";
-import Azure400Badge from "@/assets/azure-400-badge.png";
 import { Metadata } from "next";
 import { CERTIFICATIONS } from "@/constants/certifications";
 import Title from "@/components/blog/Title";
