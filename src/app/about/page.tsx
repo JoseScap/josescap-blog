@@ -5,7 +5,7 @@ import GithubFoundations from "@/assets/github-foundations-badge.png";
 import Azure400Badge from "@/assets/azure-400-badge.png";
 import { Metadata } from "next";
 import { CERTIFICATIONS } from "@/constants/certifications";
-import TitleOne from "@/components/blog/TitleOne";
+import Title from "@/components/blog/Title";
 
 export const metadata: Metadata = {
   title: "About | JoseScap's Blog",
@@ -59,20 +59,20 @@ export default function About() {
   return (
     <main className="flex-1 md:ml-64 lg:mr-64">
       <div className="p-8">
-        <TitleOne>About Me</TitleOne>
+        <Title>About Me</Title>
         <div className="space-y-4">
           <p className="text-gray-200">Hi, I'm Juan José Puente Scapolatempo, also known as JoseScap, a software engineer with over {experience} years of experience in developing applications.</p>
           <p className="text-gray-200">Throughout my career, I've worked on web applications, mobile apps, and APIs across various programming languages and technologies.</p>
           <p className="text-gray-200">Currently, I'm in the process of reinventing my professional profile as a Software & Cloud Engineer, focusing on mastering Azure technologies to build reliable and robust applications.</p>
         </div>
 
-        <h2 className="mt-8 text-2xl font-bold mb-4 text-white">Why I Created This Blog</h2>
+        <Title level={2} className="mt-8" extendClassName>Why I Created This Blog</Title>
         <div className="space-y-4">
           <p className="text-gray-200">As I focus on cloud technologies during my professional transformation, I want to share my experiences along the way. That's why I decided to document this journey through a blog.</p>
           <p className="text-gray-200">This blog will grow and evolve as I do. If you have suggestions or topics you'd like to discuss, feel free to reach out to me on <a className="font-bold hover:font-black text-[#0A66C2] hover:text-white" href="https://www.linkedin.com/in/josescap" target="_blank" rel="noopener noreferrer">LinkedIn!</a></p>
         </div>
 
-        <h2 className="mt-8 text-2xl font-bold mb-4 text-white">My Certifications</h2>
+        <Title level={2} className="mt-8" extendClassName>My certifications</Title>
         <div className="overflow-x-auto">
           <table className="min-w-full border-collapse border border-gray-700 bg-gray-800">
             <thead>
