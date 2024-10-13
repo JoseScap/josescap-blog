@@ -73,7 +73,6 @@ export default function RootLayout({
             </div>
           </aside>
 
-          {/* Main Content */}
           <main className="flex-1 md:ml-24 lg:mr-24">
             {children}
           </main>
@@ -94,11 +93,14 @@ export default function RootLayout({
             <div>
               <h3 className="text-xl font-bold mb-4">Trending Tags</h3>
               <div className="flex flex-wrap gap-2">
-                {TRENDING_TAGS.map((tag) => (
-                  <Badge key={tag} variant="secondary" className="cursor-pointer hover:bg-gray-600">
-                    {tag}
-                  </Badge>
-                ))}
+                {TRENDING_TAGS.length === 0 && <p>There are no tags at the moment!</p>}
+                {
+                  TRENDING_TAGS.map((tag) => (
+                    <Badge key={tag} variant="secondary" className="cursor-pointer hover:bg-gray-600">
+                      {tag}
+                    </Badge>
+                  ))
+                }
               </div>
             </div>
           </aside>
