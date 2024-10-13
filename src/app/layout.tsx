@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Inconsolata } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import { Archive, Home, Info, Layers, Search, Tag, Video } from "lucide-react";
@@ -10,19 +10,14 @@ import { Badge } from "@/components/ui/badge";
 import Azure204Badge from "@/assets/azure-204-badge.png";
 import profile from "@/assets/profile.jpeg"
 import TRENDING_TAGS from "@/constants/trending-tags";
-import Head from "next/head";
 import Link from "next/link";
 import APP_PAGES from "@/constants/app-pages";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+export const inconsolata = Inconsolata({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  style: ['normal'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -38,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inconsolata.className} antialiased`}
       >
         <div className="flex min-h-screen bg-gray-900 text-gray-100">
           <aside className="w-64 bg-gray-800 p-6 hidden md:block fixed left-0 top-0 h-full">
