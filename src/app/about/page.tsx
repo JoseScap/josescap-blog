@@ -7,6 +7,7 @@ import { Metadata } from "next";
 import { CERTIFICATIONS } from "@/constants/certifications";
 import Title from "@/components/blog/Title";
 import Paragraph from "@/components/blog/Paragraph";
+import Box from "@/components/blog/Box";
 
 export const metadata: Metadata = {
   title: "About | JoseScap's Blog",
@@ -61,17 +62,17 @@ export default function About() {
     <main className="flex-1 md:ml-64 lg:mr-64">
       <div className="p-8">
         <Title>About Me</Title>
-        <div className="space-y-4">
+        <Box className="space-y-4">
           <Paragraph>Hi, I'm Juan José Puente Scapolatempo, also known as JoseScap, a software engineer with over {experience} years of experience in developing applications.</Paragraph>
           <Paragraph>Throughout my career, I've worked on web applications, mobile apps, and APIs across various programming languages and technologies.</Paragraph>
           <Paragraph>Currently, I'm in the process of reinventing my professional profile as a Software & Cloud Engineer, focusing on mastering Azure technologies to build reliable and robust applications.</Paragraph>
-        </div>
+        </Box>
 
         <Title level={2} className="mt-8" extendClassName>Why I Created This Blog</Title>
-        <div className="space-y-4">
+        <Box className="space-y-4">
           <Paragraph>As I focus on cloud technologies during my professional transformation, I want to share my experiences along the way. That's why I decided to document this journey through a blog.</Paragraph>
           <Paragraph>This blog will grow and evolve as I do. If you have suggestions or topics you'd like to discuss, feel free to reach out to me on <a className="font-bold hover:font-black text-[#0A66C2] hover:text-white" href="https://www.linkedin.com/in/josescap" target="_blank" rel="noopener noreferrer">LinkedIn!</a></Paragraph>
-        </div>
+        </Box>
 
         <Title level={2} className="mt-8" extendClassName>My certifications</Title>
         <div className="overflow-x-auto">
