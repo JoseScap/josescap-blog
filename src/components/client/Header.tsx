@@ -13,7 +13,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 p-4 bg-gray-800 text-gray-100 flex items-center justify-between">
+    <header className="fixed md:hidden top-0 left-0 right-0 z-50 p-4 bg-gray-800 text-gray-100 flex items-center justify-between">
       <Button variant="ghost" onClick={() => setIsOpen(!isOpen)}>
         <Menu className="w-6 h-6" />
       </Button>
