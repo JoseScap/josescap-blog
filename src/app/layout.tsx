@@ -10,7 +10,6 @@ import { Badge } from "@/components/ui/badge";
 import Azure204Badge from "@/assets/azure-204-badge.png";
 import profile from "@/assets/profile.jpeg"
 import TRENDING_TAGS from "@/constants/trending-tags";
-import Head from "next/head";
 import Link from "next/link";
 import APP_PAGES from "@/constants/app-pages";
 
