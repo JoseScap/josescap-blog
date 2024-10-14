@@ -5,6 +5,7 @@ import Title from "@/components/blog/Title";
 import Paragraph from "@/components/blog/Paragraph";
 import Box from "@/components/blog/Box";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About | JoseScap's Blog",
@@ -86,9 +87,9 @@ export default function About() {
                 CERTIFICATIONS.map(({ achieved, badge, date, link, name }) => (
                   <TableRow>
                     <TableCell className="text-cyan-400 font-bold">
-                      <a href={link} target="_blank" rel="noopener noreferrer">
+                      <Link href={link} target="_blank" rel="noopener noreferrer">
                         {name}
-                      </a>
+                      </Link>
                     </TableCell>
                     <TableCell className="flex justify-center">
                       <Image src={badge} alt="Azure Fundamentals Badge" width={200} height={200} />
