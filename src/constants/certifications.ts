@@ -31,7 +31,7 @@ export const CERTIFICATIONS: Certification[] = [
     name: "Microsoft Certified: DevOps Engineer Expert",
     link: "https://learn.microsoft.com/es-es/credentials/certifications/devops-engineer/",
     badge: Azure400Badge,
-    date: "March 15, 2025",
+    date: "November 30, 2025",
     achieved: false
   },
 ]
