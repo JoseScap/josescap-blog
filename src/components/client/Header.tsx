@@ -27,7 +27,7 @@ export function Header() {
               {APP_PAGES.map(({ Icon, href, text }, idx) => (
                 <li key={idx}>
                   <Link href={href}>
-                    <Button variant="ghost" className="w-full justify-start text-gray-100">
+                    <Button variant="ghost" className="w-full justify-start text-gray-100" onClick={() => setIsOpen(false)}>
                       <Icon />
                       {text}
                     </Button>
