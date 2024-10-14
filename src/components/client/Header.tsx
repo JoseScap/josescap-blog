@@ -21,7 +21,7 @@ export function Header() {
       <h1 className="text-lg font-bold">Programming With JoseScap</h1>
 
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        <SheetContent side="left" className="bg-gray-800 text-gray-100">
+        <SheetContent side="left" className="bg-gray-800 pt-12 text-gray-100">
           <nav>
             <ul className="space-y-2">
               {APP_PAGES.map(({ Icon, href, text }, idx) => (
