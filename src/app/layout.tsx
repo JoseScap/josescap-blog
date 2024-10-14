@@ -12,6 +12,9 @@ import profile from "@/assets/profile.jpeg"
 import TRENDING_TAGS from "@/constants/trending-tags";
 import Link from "next/link";
 import APP_PAGES from "@/constants/app-pages";
+import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "@/components/ui/sheet";
+import { useState } from "react";
+import { Header } from "@/components/client/Header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -40,6 +43,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="flex min-h-screen bg-gray-900 text-gray-100">
+          <Header />
+
           <aside className="w-64 bg-gray-800 p-6 hidden md:block fixed left-0 top-0 h-full">
             <div className="mb-8">
               <Image
