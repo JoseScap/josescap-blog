@@ -4,6 +4,7 @@ import { CERTIFICATIONS } from "@/constants/certifications";
 import Title from "@/components/blog/Title";
 import Paragraph from "@/components/blog/Paragraph";
 import Box from "@/components/blog/Box";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 export const metadata: Metadata = {
   title: "About | JoseScap's Blog",
@@ -72,34 +73,34 @@ export default function About() {
 
         <Title level={2} className="mt-8" extendClassName>My certifications</Title>
         <div className="overflow-x-auto">
-          <table className="min-w-full border-collapse border border-gray-700 bg-gray-800">
-            <thead>
-              <tr className="bg-gray-700">
-                <th className="border border-gray-600 p-2 text-left text-white">Certification</th>
-                <th className="border border-gray-600 p-2 text-center text-white">Badge</th>
-                <th className="border border-gray-600 p-2 text-right text-white">Date</th>
-              </tr>
-            </thead>
-            <tbody>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="text-white font-bold">Certification</TableHead>
+                <TableHead className="text-white font-bold text-center">Badge</TableHead>
+                <TableHead className="text-white font-bold text-right">Date</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
               {
                 CERTIFICATIONS.map(({ achieved, badge, date, link, name }) => (
-                  <tr className="hover:bg-gray-600">
-                    <td className="border border-gray-600 p-2 text-left text-gray-200">
-                      <a href={link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+                  <TableRow>
+                    <TableCell className="text-cyan-400 font-bold">
+                      <a href={link} target="_blank" rel="noopener noreferrer">
                         {name}
                       </a>
-                    </td>
-                    <td className="border border-gray-600 p-2 flex justify-center">
+                    </TableCell>
+                    <TableCell className="flex justify-center">
                       <Image src={badge} alt="Azure Fundamentals Badge" width={200} height={200} />
-                    </td>
-                    <td className="border border-gray-600 p-2 text-right text-gray-200">
+                    </TableCell>
+                    <TableCell className="text-white font-bold text-right">
                       {achieved ? "" : "(Tentative)"} {date}
-                    </td>
-                  </tr>
+                    </TableCell>
+                  </TableRow>
                 ))
               }
-            </tbody>
-          </table>
+            </TableBody>
+          </Table>
         </div>
       </div>
     </main>
