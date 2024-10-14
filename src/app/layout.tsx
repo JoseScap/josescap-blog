@@ -77,7 +77,7 @@ export default function RootLayout({
             </div>
           </aside>
 
-          <main className="flex-1 md:ml-24 lg:mr-24">
+          <main className="flex-1 pt-16 md:pt-0 md:ml-24 lg:mr-24">
             {children}
           </main>
 
