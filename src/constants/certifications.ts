@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image"
 import Azure900Badge from "@/assets/azure-900-badge.png";
 import Azure204Badge from "@/assets/azure-204-badge.png";
-import GithubFoundationsBadge from "@/assets/github-foundations-badge.png";
+import GithubActionsBadge from "@/assets/github-actions-badge.png";
 import Azure400Badge from "@/assets/azure-400-badge.png";
 
 type Certification = {
@@ -28,9 +28,9 @@ export const CERTIFICATIONS: Certification[] = [
     achieved: true
   },
   {
-    name: "Microsoft Certified: DevOps Engineer Expert",
-    link: "https://learn.microsoft.com/es-es/credentials/certifications/devops-engineer/",
-    badge: Azure400Badge,
+    name: "GitHub Actions",
+    link: "https://assets.ctfassets.net/wfutmusr1t3h/2mMJ6nECbUAdiQMTObbPw6/67cfbffa68fed774a1d280c6c1346635/github-actions-exam-preparation-study-guide__3_.pdf",
+    badge: GithubActionsBadge,
     date: "November 30, 2025",
     achieved: false
   },
