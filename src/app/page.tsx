@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   keywords: ["JoseScap", "software engineer", "Azure", "cloud engineering", "web development", "APIs", "certifications"],
   authors: [{ name: "Juan José Puente Scapolatempo" }],
   openGraph: {
-    title: "About | JoseScap's Blog",
+    title: "JoseScap's Blog",
     description: "Learn more about JoseScap and his professional journey.",
     type: "website",
     url: "https://yourwebsite.com/about",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About | JoseScap's Blog",
+    title: "JoseScap's Blog",
     description: "Discover JoseScap's professional experience and journey in software and cloud engineering.",
     images: ["/profile.jpeg"],
   },
