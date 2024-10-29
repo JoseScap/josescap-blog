@@ -8,7 +8,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About | JoseScap's Blog",
+  title: "JoseScap's Blog",
   description: "Learn more about JoseScap, a software engineer with 4.5+ years of experience. Discover his journey in software and cloud engineering.",
   keywords: ["JoseScap", "software engineer", "Azure", "cloud engineering", "web development", "APIs", "certifications"],
   authors: [{ name: "Juan José Puente Scapolatempo" }],
